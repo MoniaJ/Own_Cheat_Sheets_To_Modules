@@ -1,0 +1,32 @@
+sudo apt-get update
+sudo apt-get install minecraft-pi
+
+import mcpi.minecraft as minecraft
+
+mc = Minecraft.create()
+
+CHAT:
+mc.postToChat("Hello world")
+
+LOCATION - HERO:
+pos = mc.player.getPos()
+x, y, z = mc.player.getPos()
+
+LOCATION - TILE BELOW THE HERO:
+pos = mc.player.getTilePos()
+
+CHANGE LOCATION:
+mc.player.setPos(x+10, y+20, z)
+
+BLOCK POSTING:
+import mcpi.block as block
+mc.setBlock(x+1, y, z, 1)
+
+
+
+
+
+
+
+https://projects.raspberrypi.org/en/projects/getting-started-with-minecraft-pi
+https://python101.readthedocs.io/pl/latest/mcpi/podstawy/
